@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SimplyMail Privacy Policy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   body { font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; line-height: 1.6; color: #222; }
   h1 { font-size: 1.6em; }
@@ -12,39 +12,69 @@
 </style>
 </head>
 <body>
-
 <h1>SimplyMail Privacy Policy</h1>
-<p><strong>Last updated:</strong> August 11, 2026</p>
+<p><em>Last updated: October 23, 2026</em></p>
 
-<p>SimplyMail ("the app") is an email client that lets you connect to your own IMAP or POP3 email account. This policy explains what data the app accesses, how it is used, and how it is stored.</p>
+<p>SimplyMail ("the app") is an email, calendar and contacts app for Android. It connects to the accounts you already have with your own email provider. This policy explains what data the app accesses, how it uses that data, and where it is stored.</p>
 
-<h2>Data We Collect</h2>
+<p>The app has no server of its own. Everything it does goes directly between your device and the servers of your provider (or Google, if you connect a Google account). We never receive your passwords, emails, calendars or contacts.</p>
+
+<h2>Data the app uses</h2>
 <ul>
-  <li><strong>Email account credentials.</strong> When you add an account, the app stores your email address, password, and mail server settings (incoming server/port, SMTP server/port) on your device only, using a local app database. These credentials are used solely to connect to your mail provider's servers on your behalf and are never sent to us or any third party other than your own mail provider.</li>
-  <li><strong>Email content and attachments.</strong> Messages, attachments, and contacts you send or receive are transmitted directly between your device and your mail provider's servers to display and send your mail. Attachments you choose to send are read from your device's file picker only when you attach them.</li>
-  <li><strong>Contact email addresses (optional).</strong> When composing a message, you may tap "Pick from contacts" to select a recipient. This opens Android's built-in contact picker; the app receives only the single email address you select and inserts it into the To/Cc/Bcc field. The app does not request access to, read, or store your full contact list.</li>
-  <li><strong>Push notifications.</strong> The app requests notification permission to alert you about new mail. No notification content is sent through any third-party push service controlled by us.</li>
+  <li><strong>Account details.</strong> When you add an account, the app stores your email address, password and server settings in its private storage on your device. Your password is sent only to your own provider's mail, calendar and contacts servers, to sign you in. It is never sent to us or anyone else.</li>
+  <li><strong>Finding your server settings.</strong> To set up an account, the app looks up your provider's settings:
+    <ul>
+      <li>It asks your provider's own servers, which receive your email address.</li>
+      <li>It asks Mozilla's public database of email providers (autoconfig.thunderbird.net). Mozilla receives only your address's domain (for example, example.com), never the full address.</li>
+      <li>It makes ordinary DNS lookups for the domain.</li>
+    </ul>
+  </li>
+  <li><strong>Email.</strong> Messages and attachments travel directly between your device and your provider's servers, so that the app can show your mail and send what you write. The app reads a file from your device only when you choose to attach it.</li>
+  <li><strong>Calendars.</strong> If you connect your provider's calendar, the app downloads your events, and any you add, change or delete are sent back to that calendar. It keeps a copy on your device so they show up offline. Appointments you keep on "This phone only" stay on your device.</li>
+  <li><strong>Invitations and tasks.</strong> When you invite people to an event or assign them a task, the app emails them through your own mail account.</li>
+  <li><strong>Contacts.</strong>
+    <ul>
+      <li>If you connect your provider's address book, the app downloads your contacts, and any you add, change or delete are sent back to it. It keeps a copy on your device, so it can suggest addresses as you write.</li>
+      <li>The app also remembers the addresses you have written to, so it can suggest them.</li>
+      <li>"Pick from contacts" opens Android's own contact picker. The app receives only the single address you choose, and never reads your phone's contact list.</li>
+    </ul>
+  </li>
+  <li><strong>Server certificates.</strong> If you choose to trust a server with its own security certificate, the app stores that certificate's fingerprint on your device, so it can recognise the server again.</li>
 </ul>
 
-<h2>Data We Do Not Collect</h2>
-<p>SimplyMail does not use analytics, advertising, or crash-reporting SDKs. We do not sell, rent, or share your data with third parties. We do not have a server of our own that receives your credentials, emails, or contacts — all mail traffic goes directly between your device and your mail provider.</p>
-
-<h2>Data Storage and Deletion</h2>
-<p>Account credentials and mail data are stored locally on your device. You can remove a connected account at any time from within the app, which deletes its stored credentials from the local database. Uninstalling the app removes all locally stored data.</p>
-
-<h2>Permissions Used</h2>
+<h2>Google Calendar and Google Contacts</h2>
+<p>If you have a Gmail account, you can connect its Google Calendar and Google Contacts by signing in with Google. You choose whether to allow access on Google's own consent screen. The app then asks Google for access to:</p>
 <ul>
-  <li><strong>Internet</strong> — required to connect to your mail provider's IMAP/POP3/SMTP servers.</li>
-  <li><strong>Notifications</strong> — required to alert you about new mail.</li>
+  <li><strong>Google Calendar</strong> (https://www.googleapis.com/auth/calendar), to show your calendars and events, and to add, change and delete events when you ask it to.</li>
+  <li><strong>Google Contacts</strong> (https://www.googleapis.com/auth/carddav), to show your contacts, suggest addresses as you write, and add, change and delete contacts when you ask it to.</li>
+</ul>
+<p>This data is used only to provide these features to you, inside the app. It goes directly between your device and Google, and copies are kept only on your device. It is never sent to us or to anyone else. It is not used for advertising, it is not sold, and no person reads it. Google's sign-in token is handled by Google Play services on your device and is never stored by the app.</p>
+<p>SimplyMail's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+<p>Removing the account in the app deletes everything the app kept for it on your device. To also withdraw the permission you gave Google, go to <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. You can do this at any time.</p>
+
+<h2>What the app does not do</h2>
+<p>SimplyMail does not use analytics, advertising or crash-reporting services. We do not sell, rent or share your data. Nothing you do in the app is tracked.</p>
+
+<h2>Storage and deletion</h2>
+<p>Everything the app stores is kept in its private storage on your device, and is not included in Android backups. When you remove an account in the app, everything kept for it is deleted from your device: its password and settings, appointments, tasks, downloaded calendars and contacts, and address suggestions. Uninstalling the app deletes everything it stored. Data on your provider's servers, or on Google's, stays there: the app deletes something there only when you ask it to.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Internet</strong> — to connect to your mail, calendar and contacts servers.</li>
+  <li><strong>Notifications</strong> — to tell you about new mail and remind you of appointments.</li>
+  <li><strong>Alarms and reminders</strong> — to show appointment reminders on time, including after the phone restarts.</li>
+  <li><strong>Local network</strong> (Android 17 and later) — asked for only if your mail server is on your own local network.</li>
 </ul>
 
-<h2>Changes to This Policy</h2>
-<p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+<h2>Children</h2>
+<p>SimplyMail is not aimed at children, and does not knowingly collect any data from them.</p>
 
-<h2>Contact Us</h2>
+<h2>Changes to this policy</h2>
+<p>We may update this policy from time to time. Any changes will be posted on this page, with a new "Last updated" date.</p>
+
+<h2>Contact us</h2>
 <p>If you have questions about this privacy policy, contact: <a href="mailto:shepherdmark1968@gmail.com">shepherdmark1968@gmail.com</a></p>
 
 <footer>SimplyMail — com.mark.simplymail</footer>
-
 </body>
 </html>
