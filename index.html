@@ -13,9 +13,9 @@
 </head>
 <body>
 <h1>SimplyMail Privacy Policy</h1>
-<p><em>Last updated: October 23, 2026</em></p>
+<p><em>Last updated: October 29, 2026</em></p>
 
-<p>SimplyMail ("the app") is an email, calendar and contacts app for Android. It connects to the accounts you already have with your own email provider. This policy explains what data the app accesses, how it uses that data, and where it is stored.</p>
+<p>SimplyMail ("the app") is an email, calendar and contacts app for Android, with a version for the Linux desktop. It connects to the accounts you already have with your own email provider. This policy explains what data the app accesses, how it uses that data, and where it is stored.</p>
 
 <p>The app has no server of its own. Everything it does goes directly between your device and the servers of your provider (or Google, if you connect a Google account). We never receive your passwords, emails, calendars or contacts.</p>
 
@@ -48,9 +48,18 @@
   <li><strong>Google Calendar</strong> (https://www.googleapis.com/auth/calendar), to show your calendars and events, and to add, change and delete events when you ask it to.</li>
   <li><strong>Google Contacts</strong> (https://www.googleapis.com/auth/carddav), to show your contacts, suggest addresses as you write, and add, change and delete contacts when you ask it to.</li>
 </ul>
-<p>This data is used only to provide these features to you, inside the app. It goes directly between your device and Google, and copies are kept only on your device. It is never sent to us or to anyone else. It is not used for advertising, it is not sold, and no person reads it. Google's sign-in token is handled by Google Play services on your device and is never stored by the app.</p>
+<p>This data is used only to provide these features to you, inside the app. It goes directly between your device and Google, and copies are kept only on your device. It is never sent to us or to anyone else. It is not used for advertising, it is not sold, and no person reads it. On Android, Google's sign-in token is handled by Google Play services on your device and is never stored by the app. The Linux desktop has no Google Play services, so there the app keeps Google's sign-in token in your desktop's keyring, so that you don't have to sign in again each time. The short-lived tokens made from it are kept only in memory.</p>
 <p>SimplyMail's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
-<p>Removing the account in the app deletes everything the app kept for it on your device. To also withdraw the permission you gave Google, go to <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>. You can do this at any time.</p>
+<p>Removing the account in the app deletes everything the app kept for it on your device. On the Linux desktop, it also withdraws the permission you gave Google. You can withdraw that permission yourself at any time, at <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>.</p>
+
+<h2>SimplyMail on the Linux desktop</h2>
+<p>The desktop version works the same way, with these differences:</p>
+<ul>
+  <li>Your passwords, and Google's sign-in token if you connect a Google account, are kept in your desktop's keyring (such as GNOME Keyring), never in a file.</li>
+  <li>Everything else it keeps, such as settings, downloaded calendars and contacts, appointments and tasks, is stored in files in your home folder (~/.config/simplymail) that only you can read.</li>
+  <li>To connect Google Calendar or Google Contacts, the app opens Google's consent page in your web browser. Google's answer comes back to the app on your own computer only.</li>
+  <li>Uninstalling the app leaves those files in place: delete the ~/.config/simplymail folder to remove them.</li>
+</ul>
 
 <h2>What the app does not do</h2>
 <p>SimplyMail does not use analytics, advertising or crash-reporting services. We do not sell, rent or share your data. Nothing you do in the app is tracked.</p>
